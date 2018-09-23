@@ -1,0 +1,50 @@
+---
+title: "Course9week4 Assignment-Cherry"
+author: "Cherry"
+date: "9/23/2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Assignment Introduction
+
+It is required to create a Shiny application and deploy it on Rstudio's servers. 
+
+The application must include the following:
+
+1. Some form of input (widget: textbox, radio button, checkbox, ...)
+2. Some operation on the ui input in sever.R
+3. Some reactive output displayed as a result of server calculations
+4. You must also include enough documentation so that a novice user could use your application.
+5. The documentation should be at the Shiny website itself. Do not post to an external link.
+
+## Brief introduction of my shiny app1
+
+I plan to use datasets "cars" as the supporting materials. It gives the speed of cars and the distances taken to stop. 
+
+```{r cars, echo = TRUE}
+plot(cars)
+```
+
+## Brief introduction of my shiny app2
+
+Based on the simple analysis, we can tell the stopping distances has a linear correlation with car speed. 
+
+```{r, echo=FALSE}
+plot(cars)
+pred <- lm(dist~speed, data = cars)
+abline(pred, col="red")
+```
+
+## Brief introduction of my shiny app3
+
+So I create a shiny app to predict the stopping distance by entering a car speed.
+
+You can find my shiny app at : <https://cherrychen.shinyapps.io/cherry-developing_data_products/>
+
+The ui.R and server.R code can be found at : <https://github.com/spoiledcherry/course9week4.git>
+
+Thank you!
